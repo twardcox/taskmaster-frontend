@@ -12,6 +12,10 @@ npm run int-test
 
 JSON is cool and all, but humans struggle with understanding it. Let’s admit our human failings by creating a web frontend with React to view this data in a more user-friendly way. 🤖
 
+## Screen Shot
+
+![Alt text](./ScreenShot.jpg?raw=true 'Reverse Array')
+
 ## Resources
 
 - [The AWS Java SDK](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/welcome.html)
