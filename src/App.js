@@ -1,4 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
+
+import History from './js/History.js';
+import AssignUser from './js/AssignUser.js';
+import UpdateStatus from './js/UpdateStatus.js';
+import DeleteTask from './js/DeleteTask.js';
+import AddTask from './js/AddNewTask.js';
+import AddImage from './js/AddImage.js';
 
 import './App.scss';
 
@@ -11,60 +18,50 @@ const API = 'http://taskmaster-dev22.us-west-2.elasticbeanstalk.com/api/v1/tasks
 // TODO : Add a link to delete or change status
 
 function App() {
-
   const [tasks, setTasks] = useState([]);
 
   function _getTasks() {
     fetch(API)
-      .then(data => data.json())
-      
-      .then(fetchedTasks => setTasks(fetchedTasks));
- 
+      .then( data => data.json() )
+      .then( fetchedTasks => {
+        setTasks(fetchedTasks);
+      });
   }
 
-  function _deleteTask(id) {
-    fetch()
-      .method()
-      .then();
-  }
-
-  useEffect(_getTasks, []);
+  useEffect( _getTasks, []);
 
   return (
-    <div className="app">
-      <h1>A list of Titles and Actions</h1>
-      <ul>
-        {tasks.map((task, idx) => {
-          
-          return (
-            <li key={task.id}>
-              <details>
-                <summary>
-                  <span onClick={_deleteTask}>{task.title}</span>
-                </summary>
-                <History history={task.history} />
-              </details>
-            </li>
-          )
-        })}
-      </ul>
-    </div>
+    <React.Fragment>
+      <header className="jumbotron">
+        <h1>TaskMaster</h1>
+      </header>
+      <div className="App container">
+        <h1>Task List</h1>
+        <ul>
+          {tasks.map( task => {
+            return (
+              <li key={task.id}>
+                <details>
+                  <summary>
+                    <span>{task.title}</span><br/>
+                  </summary>
+                  <img src={task.image} alt={task.title}/>
+                  <History history={task.history}/>
+                  <AssignUser api={API} data={task} reload={_getTasks}/>
+                  <UpdateStatus api={API} data={task} reload={_getTasks}/>
+                  <br/>
+                  <AddImage api={API} data={task} reload={_getTasks}/>
+                  <br/>
+                  <DeleteTask api={API} data={task} reload={_getTasks}/>
+                </details>
+              </li>
+            )
+          })}
+        </ul>
+        <AddTask api={API} reload={_getTasks}/>
+      </div>
+    </React.Fragment>
   );
-}
-
-function History(props) {
-  return (
-    <ol>
-      {props.history.map((record, idx) => {
-        return (
-          <li key={idx}>
-            <span>{record.timestamp}</span>
-            <span>{record.action}</span>
-          </li>
-        )
-      })}
-    </ol>
-  )
 }
 
 export default App;

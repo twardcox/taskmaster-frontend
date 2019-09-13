@@ -1,5 +1,12 @@
 # Lab: A Static Frontend for TaskMaster
 
+## Code and instructional contributions:
+
+- Nick Paro
+- Matt Stuhring
+- Marisha Hosa
+- Renee Messik
+
 ## How to deploy
 
 git clone your-repo
@@ -8,13 +15,21 @@ npm run build
 ftp build target.com/folder
 npm run int-test
 
+## a link to the deployed application on S3
+
+http://taskmaster-frontend1.s3-website-us-west-2.amazonaws.com
+
+## a link to the backend repo
+
+https://github.com/Taskmaster-401/taskmaster/pull/3
+
 ## Overview
 
 JSON is cool and all, but humans struggle with understanding it. Let’s admit our human failings by creating a web frontend with React to view this data in a more user-friendly way. 🤖
 
 ## Screen Shot
 
-![Alt text](./ScreenShot.jpg?raw=true 'Reverse Array')
+![Screen Shot](./ScreenShot.jpg?raw=true 'ScreenShot')
 
 ## Resources
 
