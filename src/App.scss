@@ -6,3 +6,15 @@ ul {
   list-style: square outside none;
   list-style-image: url(./images/piglet.jpg)
 }
+
+form {
+  margin: 1vh;
+  padding: 1vh;
+  border: 2px solid black;
+  width: 30vw;
+}
+
+img {
+  max-width: 15vw;
+  border-radius: 200px;
+}

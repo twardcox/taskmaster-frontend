@@ -27,11 +27,13 @@ export default function AddImage(props) {
   return (
     <div>
       <form onSubmit={_uploadFile} action={API} method="POST" encType="multipart/form-data">
+        <div>
         <label>
           <span>Upload Image</span>
-          <input onChange={_handleChange} name="file" type="file" />
+          <input onChange={_handleChange} name="file" type="file" className="btn btn-primary"/>
         </label>
-        <button>Save</button>
+        <button className="btn btn-primary">Save</button>
+        </div>
       </form>
     </div>
   )

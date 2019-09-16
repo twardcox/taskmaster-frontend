@@ -11,6 +11,6 @@ export default function DeleteTask(props) {
   }
 
   return (
-    <button onClick={_deleteTask}>Delete Task</button>
+    <button onClick={_deleteTask} className="btn btn-danger">Delete Task</button>
   )
 }
