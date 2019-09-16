@@ -11,6 +11,6 @@ export default function UpdateStatus(props) {
   }
 
   return (
-    <button onClick={_updateStatus}>Update Status</button>
+    <button className="btn btn-success" onClick={_updateStatus}>Update Status</button>
   )
 }

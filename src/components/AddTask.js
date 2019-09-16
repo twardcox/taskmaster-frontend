@@ -49,7 +49,7 @@ export default function AddTask(props) {
         <label htmlFor="description">Description</label>
         <textarea onChange={_handleChange} type="text" name="description" id="description" rows="4" cols="50"></textarea>
       </div>
-      <button type="submit">Submit</button>
+      <button className="btn btn-primary" type="submit">Submit</button>
       </fieldset>
     </form>
   )

@@ -9,8 +9,8 @@ import AddImage from './components/AddImage.js';
 
 import './App.scss';
 
-// const API = 'http://taskmaster-dev22.us-west-2.elasticbeanstalk.com/api/v1/tasks';
-const API = 'http://localhost:5000/api/v1/tasks';
+const API = 'http://taskmaster-dev22.us-west-2.elasticbeanstalk.com/api/v1/tasks';
+// const API = 'http://localhost:5000/api/v1/tasks';
 
 // On Load - Get that data from the API
 // Iterate and display major task points
