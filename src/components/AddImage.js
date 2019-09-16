@@ -16,8 +16,7 @@ export default function AddImage(props) {
     
     fetch(API, {
         method: 'POST',
-        mode: 'cors',
-        body: form
+        body: form,
       })
       .then(response => response.json())
       .catch(error => console.error('Error:', error))

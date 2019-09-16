@@ -1,6 +1,6 @@
 # Lab: A Static Frontend for TaskMaster
 
-## Code and instructional contributions:
+## Code and instructional contributions
 
 - Nick Paro
 - Matt Stuhring

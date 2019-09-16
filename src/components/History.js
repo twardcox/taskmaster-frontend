@@ -7,7 +7,7 @@ export default function History(props) {
       {props.history.map((record,idx) => {
         return (
           <li key={idx}>
-            <span>Date: {record.date}</span><br/>
+            <span>Date: {record.time}</span><br/>
             <span>Action: {record.action}</span>
           </li>
         )

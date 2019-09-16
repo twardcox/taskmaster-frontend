@@ -1,15 +1,16 @@
 import React, {useState, useEffect} from 'react';
 
-import History from './js/History.js';
-import AssignUser from './js/AssignUser.js';
-import UpdateStatus from './js/UpdateStatus.js';
-import DeleteTask from './js/DeleteTask.js';
-import AddTask from './js/AddNewTask.js';
-import AddImage from './js/AddImage.js';
+import History from './components/History.js';
+import AssignUser from './components/AddUser.js';
+import UpdateStatus from './components/UpdatedStatus.js';
+import DeleteTask from './components/DeleteTask.js';
+import AddTask from './components/AddTask.js';
+import AddImage from './components/AddImage.js';
 
 import './App.scss';
 
-const API = 'http://taskmaster-dev22.us-west-2.elasticbeanstalk.com/api/v1/tasks';
+// const API = 'http://taskmaster-dev22.us-west-2.elasticbeanstalk.com/api/v1/tasks';
+const API = 'http://localhost:5000/api/v1/tasks';
 
 // On Load - Get that data from the API
 // Iterate and display major task points
@@ -39,6 +40,7 @@ function App() {
         <h1>Task List</h1>
         <ul>
           {tasks.map( task => {
+            console.log('task: ', task);
             return (
               <li key={task.id}>
                 <details>

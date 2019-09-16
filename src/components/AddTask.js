@@ -26,7 +26,7 @@ export default function AddTask(props) {
     fetch(API, 
       {
         method: 'POST',
-        mode: 'cors',
+ 
         headers: {
           'Content-Type': 'application/json'
         },
@@ -35,7 +35,7 @@ export default function AddTask(props) {
     )
       .then( response => response.json() )
       .then( () => props.reload() );
-  }
+  };
 
   return (
     <form onSubmit={_setTask}>
