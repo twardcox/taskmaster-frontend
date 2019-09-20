@@ -6,7 +6,7 @@ export default function UpdateStatus(props) {
 
     fetch(API, {
       method: 'PUT',
-      mode: 'cors'
+      mode: 'no-cors'
     }).then( () => props.reload() );
   }
 
