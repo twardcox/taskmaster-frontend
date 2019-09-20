@@ -6,7 +6,8 @@ export default function DeleteTask(props) {
     console.log('props: ', props);
 
     fetch(API, {
-      method: 'DELETE'
+      method: 'DELETE',
+      mode: 'no-cors',
     }).then( () => props.reload() );
   }
 

@@ -16,6 +16,7 @@ export default function AddImage(props) {
     
     fetch(API, {
         method: 'POST',
+        mode: 'no-cors',
         body: form,
       })
       .then(response => response.json())

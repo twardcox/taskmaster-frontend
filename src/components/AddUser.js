@@ -15,7 +15,7 @@ export default function AssignUser(props) {
 
     fetch(API, {
       method: 'PUT',
-      mode: 'cors'
+      mode: 'no-cors'
     }).then( () => props.reload() );
   }
 
